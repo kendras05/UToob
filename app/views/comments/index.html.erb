@@ -1,0 +1,11 @@
+  <% @comments.each do |comment| %>
+  <p>
+    <%= comment.body %>
+    -
+    <%= link_to("edit", edit_comment_path(comment.id)) %>
+    -
+    <%= link_to("delete", comment_path(comment.id), method: :delete, data: {confirm: "Are you sure?"})%>
+  </p>
+  <% end %> 
+<% end %>
+
