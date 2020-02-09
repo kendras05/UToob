@@ -1,7 +1,9 @@
 class AdminBaseController < ApplicationController
     before_action :authenticate
     before_action :authorize
-
+   
+    def index
+    end 
   private
 
   def authenticate
