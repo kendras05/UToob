@@ -1,11 +1,14 @@
 <h1>Movies#index</h1>
 
 <% @movies.each do |movie| %>
-  <p>
-
-
-  <iframe width="560" height="315" src="<%= movie.trailer %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  </p>
-
+          <div class="card mb-4">
+            <iframe width="560" height="315" src="<%= movie.trailer %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+          <div class="card-body">
+          <h2 class="card-title"><%= movie.title %></h2>
+          <p class="card-text">
+      <%= link_to("new", new_comment_path)%>
+      <%= link_to("All comments", comments_path)%>
+          </p>
+          </div>
 <% end %>
 
