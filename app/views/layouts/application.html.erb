@@ -34,7 +34,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="users#new">Create Account</a>
+            <a class="nav-link" href="new_user_path">Create Account</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="sessions#new">Login</a>
@@ -46,7 +46,12 @@
       </div>
     </div>
   </nav>
-
+    <% if notice %>
+      <div class="flash-notice"><%= notice %></div>
+    <% end %>
+    <% if alert %>
+      <div class="flash-alert"><%= alert %></div>
+    <% end %>
 
     <%= yield %>
   </body>
